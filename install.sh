@@ -9,7 +9,7 @@ echo 'Update software'
 apt update && apt -y dist-upgrade
 
 echo 'Install new software'
-apt install -y openvpn transmission-daemon minidlna samba python3 python3-venv iptables-persistent
+apt install -y openvpn transmission-daemon minidlna samba python3 python3-dev python3-venv iptables-persistent
 
 echo 'Install Flexget'
 python3 -m venv ~/flexget
