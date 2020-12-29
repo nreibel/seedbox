@@ -15,7 +15,8 @@ echo 'Install Flexget'
 python3 -m venv ~/flexget
 pushd ~/flexget
 ./bin/pip install wheel
-./bin/pip install flexget transmissionrpc
+./bin/pip install flexget
+./bin/pip install transmission-rpc
 popd
 
 if [ ! -d /public ]; then
