@@ -5,7 +5,7 @@ tasks:
       quality: 1080p
       propers: yes
     transmission:
-      host: odroid.home
+      host: odroid.local
       port: 9091
       username: transmission
       password: transmission

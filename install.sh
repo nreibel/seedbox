@@ -33,6 +33,7 @@ fi
 
 echo 'Set firewall rules'
 iptables -F
+iptables -A OUTPUT -m owner --uid-owner debian-transmission -d 127.0.0.1/32 -j ACCEPT
 iptables -A OUTPUT -m owner --uid-owner debian-transmission -d 192.168.1.0/24 -j ACCEPT
 iptables -A OUTPUT -m owner --uid-owner debian-transmission \! -o tun0 -j REJECT
 iptables-save > /etc/iptables/rules.v4
@@ -53,7 +54,6 @@ systemctl daemon-reload
 
 echo 'Install scripts and crontab'
 chmod +x /root/vpn.sh
-chmod +x /root/reload_minidlna.sh
 chmod +x /root/update.sh
 
 crontab < ./crontab

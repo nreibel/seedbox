@@ -1,5 +1,5 @@
 # cron syntax is <minute> <hour> <dom> <mon> <dow> <command>
-LOGFILES=/root/logs
+LOGFILES=/var/log
 SHELL=/bin/sh
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:usr/local/bin:/usr/local/sbin
 
